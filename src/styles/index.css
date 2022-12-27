@@ -1,0 +1,38 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  background-color: #e6f0f8;
+
+  font-family: "Avenir Next", "Social Media Circled", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@layer utilities {
+  .grid-custom {
+    grid-template-columns: repeat(4, minmax(0, max-content));
+  }
+
+  .member-custom-grid {
+    grid-template-columns: repeat(2, minmax(0, max-content));
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

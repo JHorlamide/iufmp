@@ -1,0 +1,28 @@
+.hero_style {
+  position: relative;
+}
+
+.hero_style::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -78px;
+  height: 10rem;
+  background-color: #f3fcf5;
+  transform: skewY(-5deg);
+}
+
+@media (max-width: 390px) {
+  .hero_style::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+    height: 8rem;
+    background-color: #f3fcf5;
+    transform: skewY(-10deg);
+  }
+}
+

@@ -1,0 +1,27 @@
+.media {
+  position: relative;
+}
+
+.media::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -78px;
+  height: 10rem;
+  background-color: white;
+  transform: skewY(-5deg);
+}
+
+@media (max-width: 390px) {
+  .media::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+    height: 8rem;
+    background-color: white;
+    transform: skewY(-10deg);
+  }
+}

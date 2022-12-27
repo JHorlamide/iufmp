@@ -1,0 +1,80 @@
+.animates {
+  transition: transform 0.2s ease-in-out;
+  transform: translateX(10px);
+  transform: translateX(0);
+}
+
+.carousel_item {
+  position: relative;
+}
+
+.carousel_item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  height: 8rem;
+  background-color: #e6f0f8;
+  /* background-color: red; */
+  transform: skewY(-3deg);
+  z-index: 10;
+}
+
+.carousel-indicators {
+  margin: 0;
+}
+
+#carousel_indicator_button {
+  padding: 2px;
+  background-color: #2aaf4a;
+  border: solid #2aaf4a 1px;
+  border-radius: 10px;
+}
+
+#carousel_indicator_container [aria-current]:not([aria-current="false"]) {
+  width: 45%;
+  padding: 0.5px;
+  background-color: #2aaf4a;
+  border: solid #2aaf4a 1px;
+  border-radius: 10px;
+}
+
+@media (max-width: 390px) {
+  .carousel_item::before {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 7rem;
+    bottom: -100px;
+    position: absolute;
+    background-color: #f3fcf5;
+    transform: skewY(-4deg);
+  }
+}
+
+@media (max-width: 414px) {
+  .carousel_item::before {
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    height: 7rem;
+    position: absolute;
+    background-color: #f3fcf5;
+    transform: skewY(-4deg);
+  }
+}
+
+@media (max-width: 360px) {
+  .carousel_item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    height: 7rem;
+    background-color: #f3fcf5;
+    transform: skewY(-4deg);
+  }
+}
